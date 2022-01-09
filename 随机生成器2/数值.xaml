@@ -18,18 +18,18 @@
 		</StackPanel>
 		<CheckBox x:Name="浮点" Content="浮点"/>
 		<StackPanel Orientation="Horizontal">
-			<CheckBox x:Name="规定平均值" Content="平均值"/>
-			<TextBox x:Name="平均值" IsEnabled="{Binding IsChecked, ElementName=规定平均值}"/>
+			<CheckBox x:Name="规定均值" Content="均值"/>
+			<TextBox x:Name="均值" IsEnabled="{Binding IsChecked, ElementName=规定均值}"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal">
-			<CheckBox x:Name="规定标准差" Content="标准差"/>
-			<TextBox x:Name="标准差" IsEnabled="{Binding IsChecked, ElementName=规定标准差}"/>
+			<CheckBox x:Name="规定方差" Content="方差"/>
+			<TextBox x:Name="方差" IsEnabled="{Binding IsChecked, ElementName=规定方差}"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal">
-			<TextBox x:Name="数值_生成个数" Header="生成个数"/>
-			<CheckBox x:Name="数值_无重复" Content="无重复"/>
+			<TextBox x:Name="生成个数" Header="生成个数"/>
+			<CheckBox x:Name="无重复" Content="无重复"/>
+			<Button x:Name="生成" Content="生成"/>
 		</StackPanel>
-		<Button x:Name="数值_生成" Content="生成"/>
-		<TextBlock IsTextSelectionEnabled="True"/>
+		<TextBlock x:Name="输出" IsTextSelectionEnabled="True" TextWrapping="WrapWholeWords"/>
 	</StackPanel>
 </Page>

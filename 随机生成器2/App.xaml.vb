@@ -5,23 +5,7 @@
 ''' </summary>
 NotInheritable Class App
 	Inherits Application
-	Shared ReadOnly 漫游设置 As ApplicationDataContainer = ApplicationData.Current.RoamingSettings
-
-	Friend Shared Sub 设置控件(文本框 As TextBox, 默认值 As String)
-		文本框.Text = If(漫游设置.Values(文本框.Name), 默认值)
-	End Sub
-
-	Friend Shared Sub 设置控件(勾选框 As CheckBox, 默认值 As Boolean)
-		勾选框.IsChecked = If(漫游设置.Values(勾选框.Name), 默认值)
-	End Sub
-
-	Friend Shared Sub 保存控件(文本框 As TextBox)
-		漫游设置.Values(文本框.Name) = 文本框.Text
-	End Sub
-
-	Friend Shared Sub 保存控件(勾选框 As CheckBox)
-		漫游设置.Values(勾选框.Name) = 勾选框.IsChecked
-	End Sub
+	Friend Shared ReadOnly 漫游设置 As IPropertySet = ApplicationData.Current.RoamingSettings.Values
 	''' <summary>
 	''' 在应用程序由最终用户正常启动时进行调用。
 	''' 当启动应用程序以打开特定的文件或显示时使用

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="随机生成器2.密码"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:随机生成器2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	<Page.Resources>
+		<Flyout x:Name="错误提示">
+			<TextBlock x:Name="错误消息"/>
+		</Flyout>
+	</Page.Resources>
+	<StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<CheckBox x:Name="数字" Content="数字"/>
+			<CheckBox x:Name="小写字母" Content="小写字母"/>
+			<CheckBox x:Name="大写字母" Content="大写字母"/>
+		</StackPanel>
+		<CheckBox x:Name="使用其它字符">
+			<TextBox x:Name="其它字符"/>
+		</CheckBox>
+		<StackPanel Orientation="Horizontal">
+			<CheckBox x:Name="每种字符至少一个" Content="每种字符至少一个"/>
+			<TextBox x:Name="密码长度" Header="密码长度"/>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<Button x:Name="生成" Content="生成"/>
+			<Button x:Name="复制到剪贴板" Content="复制到剪贴板">
+				<Button.Flyout>
+					<Flyout>
+						<TextBlock Text="已复制"/>
+					</Flyout>
+				</Button.Flyout>
+			</Button>
+		</StackPanel>
+		<TextBlock x:Name="输出" TextWrapping="WrapWholeWords" IsTextSelectionEnabled="True"/>
+	</StackPanel>
+</Page>

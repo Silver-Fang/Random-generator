@@ -134,14 +134,13 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="均值标差浮点随机数.vb" />
-    <Compile Include="均值浮点随机数.vb" />
+    <Compile Include="密码.xaml.vb">
+      <DependentUpon>密码.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="随机生成算法.vb" />
     <Compile Include="数值.xaml.vb">
       <DependentUpon>数值.xaml</DependentUpon>
     </Compile>
-    <Compile Include="浮点随机数.vb" />
-    <Compile Include="长整随机数.vb" />
-    <Compile Include="随机数生成器.vb" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -211,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="密码.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="数值.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,6 +250,9 @@
     <Import Include="Windows.UI.Xaml.Navigation" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MathNet.Numerics">
+      <Version>5.0.0-alpha08</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
     </PackageReference>
