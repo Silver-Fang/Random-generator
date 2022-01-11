@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="随机生成器2.数值"
+    x:Class="随机生成器2.汉字"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:随机生成器2"
@@ -13,17 +13,16 @@
 	</Page.Resources>
 	<StackPanel>
 		<StackPanel Orientation="Horizontal">
-			<TextBox x:Name="最小值" Header="最小值"/>
-			<TextBox x:Name="最大值" Header="最大值"/>
-		</StackPanel>
-		<CheckBox x:Name="浮点" Content="浮点"/>
-		<StackPanel Orientation="Horizontal">
-			<CheckBox x:Name="规定均值" Content="均值"/>
-			<TextBox x:Name="均值" IsEnabled="{Binding IsChecked, ElementName=规定均值}"/>
+			<CheckBox x:Name="一级规范字" Content="一级规范字"/>
+			<CheckBox x:Name="二级规范字" Content="二级规范字"/>
+			<CheckBox x:Name="三级规范字" Content="三级规范字"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal">
-			<CheckBox x:Name="规定方差" Content="方差"/>
-			<TextBox x:Name="方差" IsEnabled="{Binding IsChecked, ElementName=规定方差}"/>
+			<CheckBox x:Name="中日韩统一表意文字" Content="中日韩统一表意文字"/>
+			<CheckBox x:Name="扩展A" Content="扩展A"/>
+			<CheckBox x:Name="扩展B" Content="扩展B"/>
+			<CheckBox x:Name="扩展C" Content="扩展C"/>
+			<CheckBox x:Name="扩展D" Content="扩展D"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal">
 			<TextBox x:Name="生成个数" Header="生成个数"/>

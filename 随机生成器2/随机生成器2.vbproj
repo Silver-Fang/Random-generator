@@ -134,8 +134,17 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="乱序.xaml.vb">
+      <DependentUpon>乱序.xaml</DependentUpon>
+    </Compile>
     <Compile Include="密码.xaml.vb">
       <DependentUpon>密码.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="帮助.xaml.vb">
+      <DependentUpon>帮助.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="汉字.xaml.vb">
+      <DependentUpon>汉字.xaml</DependentUpon>
     </Compile>
     <Compile Include="随机生成算法.vb" />
     <Compile Include="数值.xaml.vb">
@@ -200,6 +209,7 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="帮助文档.htm" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -210,11 +220,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="乱序.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="密码.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="帮助.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="数值.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="汉字.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -256,6 +278,16 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="字符集\一级规范字.u32" />
+    <Content Include="字符集\三级规范字.u32" />
+    <Content Include="字符集\中日韩统一表意文字.u32" />
+    <Content Include="字符集\二级规范字.u32" />
+    <Content Include="字符集\扩展A.u32" />
+    <Content Include="字符集\扩展B.u32" />
+    <Content Include="字符集\扩展C.u32" />
+    <Content Include="字符集\扩展D.u32" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

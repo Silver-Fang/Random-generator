@@ -217,4 +217,10 @@ Public NotInheritable Class 数值
 		规定方差.IsEnabled = True
 		漫游设置("数值.无重复") = 无重复.IsChecked
 	End Sub
+
+	Private Sub 复制到剪贴板_Click(sender As Object, e As RoutedEventArgs) Handles 复制到剪贴板.Click
+		Dim 数据包 As New DataTransfer.DataPackage
+		数据包.SetText(输出.Text)
+		DataTransfer.Clipboard.SetContent(数据包)
+	End Sub
 End Class

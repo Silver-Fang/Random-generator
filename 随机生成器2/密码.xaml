@@ -16,15 +16,15 @@
 			<CheckBox x:Name="数字" Content="数字"/>
 			<CheckBox x:Name="小写字母" Content="小写字母"/>
 			<CheckBox x:Name="大写字母" Content="大写字母"/>
+			<CheckBox x:Name="使用其它字符">
+				<TextBox x:Name="其它字符"/>
+			</CheckBox>
 		</StackPanel>
-		<CheckBox x:Name="使用其它字符">
-			<TextBox x:Name="其它字符"/>
-		</CheckBox>
 		<StackPanel Orientation="Horizontal">
 			<CheckBox x:Name="每种字符至少一个" Content="每种字符至少一个"/>
-			<TextBox x:Name="密码长度" Header="密码长度"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal">
+			<TextBox x:Name="密码长度" Header="密码长度"/>
 			<Button x:Name="生成" Content="生成"/>
 			<Button x:Name="复制到剪贴板" Content="复制到剪贴板">
 				<Button.Flyout>

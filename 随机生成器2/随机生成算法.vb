@@ -41,27 +41,29 @@ Module 随机生成算法
 		Return 等差迭代器(N, -1).Take(K).Aggregate(AddressOf BigInteger.Multiply) / 等差迭代器(1, 1).Take(K).Aggregate(AddressOf BigInteger.Multiply)
 	End Function
 
-	Function 随机排列(最小值 As BigInteger, 最大值 As BigInteger, 生成个数 As UInteger) As IEnumerable(Of BigInteger)
+	Function 随机排列(最小值 As BigInteger, 最大值 As BigInteger, 生成个数 As Integer) As IEnumerable(Of BigInteger)
 		Dim 排列(生成个数 - 1) As BigInteger
-		排列(0) = 离散均匀分布(最小值, 最大值).First
-		Dim 比较缓存 As Boolean()
-		Dim 通过检查 As Boolean
-		Dim 随机数 As BigInteger
-		For a As UInteger = 1 To 生成个数 - 1
-			随机数 = 离散均匀分布(最小值, 最大值 - a).First
-			比较缓存 = Enumerable.Repeat(True, a).ToArray
-			Do
-				通过检查 = True
-				For b As UInteger = 0 To a - 1
-					If 比较缓存(b) AndAlso 随机数 >= 排列(b) Then
-						比较缓存(b) = False
-						通过检查 = False
-						随机数 += 1
-					End If
-				Next
-			Loop Until 通过检查
-			排列(a) = 随机数
-		Next
+		If 生成个数 > 0 Then
+			排列(0) = 离散均匀分布(最小值, 最大值).First
+			Dim 比较缓存 As Boolean()
+			Dim 通过检查 As Boolean
+			Dim 随机数 As BigInteger
+			For a As UInteger = 1 To 生成个数 - 1
+				随机数 = 离散均匀分布(最小值, 最大值 - a).First
+				比较缓存 = Enumerable.Repeat(True, a).ToArray
+				Do
+					通过检查 = True
+					For b As UInteger = 0 To a - 1
+						If 比较缓存(b) AndAlso 随机数 >= 排列(b) Then
+							比较缓存(b) = False
+							通过检查 = False
+							随机数 += 1
+						End If
+					Next
+				Loop Until 通过检查
+				排列(a) = 随机数
+			Next
+		End If
 		Return 排列
 	End Function
 

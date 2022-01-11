@@ -21,6 +21,12 @@ Public NotInheritable Class MainPage
                 框架.Navigate(GetType(数值))
             Case "密码"
                 框架.Navigate(GetType(密码))
+            Case "汉字"
+                框架.Navigate(GetType(汉字))
+            Case "乱序"
+                框架.Navigate(GetType(乱序))
+            Case "帮助"
+                框架.Navigate(GetType(帮助))
         End Select
     End Sub
 
@@ -32,5 +38,20 @@ Public NotInheritable Class MainPage
     Private Sub 主页_密码_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles 主页_密码.Tapped
         漫游设置("当前页") = "密码"
         框架.Navigate(GetType(密码))
+    End Sub
+
+    Private Sub 主页_汉字_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles 主页_汉字.Tapped
+        漫游设置("当前页") = "汉字"
+        框架.Navigate(GetType(汉字))
+    End Sub
+
+    Private Sub 主页_帮助_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles 主页_帮助.Tapped
+        漫游设置("当前页") = "帮助"
+        框架.Navigate(GetType(帮助))
+    End Sub
+
+    Private Sub 主页_乱序_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles 主页_乱序.Tapped
+        漫游设置("当前页") = "乱序"
+        框架.Navigate(GetType(乱序))
     End Sub
 End Class
